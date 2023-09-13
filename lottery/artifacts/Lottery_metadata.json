@@ -6,9 +6,71 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_minimumPlayers",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "winner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "prize",
+						"type": "uint256"
+					}
+				],
+				"name": "LotteryWinnerSelected",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "numberOfPlayers",
+						"type": "uint256"
+					}
+				],
+				"name": "NewPlayerEntered",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "deadline",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -32,12 +94,51 @@
 			},
 			{
 				"inputs": [],
+				"name": "lotteryOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "manager",
 				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumPlayers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numberOfPlayers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -83,6 +184,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "winner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "receive"
 			}
@@ -115,11 +229,11 @@
 	},
 	"sources": {
 		"lottery/lottery.sol": {
-			"keccak256": "0x239e78ace58a81ccf9b3d0c040b86d6e9ff08b98d90700c37da0c8458ad09e3b",
+			"keccak256": "0x725ca9c43ffb764e93e5b3870c199782a9b7a88d571130d6cb3f5ebd123dfef4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a53d386843c68a270a435e10bdcc67cdd4ebb07e416274af5bf0d4b7190ed969",
-				"dweb:/ipfs/QmTxN6eFo6mPR5QFV3NNYWuUCs9utGqK2dpxjc86gmzuaG"
+				"bzz-raw://990dd44e3b779ca4dd068c60c6bfdf5c7acd9c61c82b3a48c33204f9d1f67b45",
+				"dweb:/ipfs/Qme44VCBbpKV2h1D8G4ikFZnW4qDBoeCzeEea9rvkiKbM4"
 			]
 		}
 	},
